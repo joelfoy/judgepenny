@@ -2,7 +2,7 @@
 include("includes/header.php");
 ?>
 <div id="wrapper">
-
+<h1>Judge Penny's Foundation</h1>
 <div class="leftCol">
 	<h2>Who We Are!</h2>
 	<div class="block">
@@ -18,20 +18,20 @@ include("includes/header.php");
 	<div class="block">
 		<h3>Board of Directors</h3>
 		<ul class="board-of-directors">
-			<li class="board-member"><span class="board-position">President</span>, Rev. Judge Penny Brown Reynolds</li>
-			<li class="board-member"><span class="board-position">V. P. & Chief Financial Officer</span>, Rev. Edward S. Reynolds</li>
-			<li class="board-member"><span class="board-position">Corresponding Secretary</span>, Deborah Dejoie</li>
-			<li class="board-member"><span class="board-position">IT Director</span>, Michael P. Armour, Jr.</li>
-			<li class="board-member"><span class="board-position">Youth Director & Youth Director</span>, Michelle Lippitt</li>
-			<li class="board-member"><span class="board-position">Attorney</span>, Nikisha McDonald</li>
+			<li class="board-member"><span class="board-position">President</span>Rev. Judge Penny Brown Reynolds</li>
+			<li class="board-member"><span class="board-position">V. P. & Chief Financial Officer</span>Rev. Edward S. Reynolds</li>
+			<li class="board-member"><span class="board-position">Corresponding Secretary</span>Deborah Dejoie</li>
+			<li class="board-member"><span class="board-position">IT Director</span>Michael P. Armour, Jr.</li>
+			<li class="board-member"><span class="board-position">Youth Director & Youth Director</span>Michelle Lippitt</li>
+			<li class="board-member"><span class="board-position">Attorney</span>Nikisha McDonald</li>
 
 		</ul>
 	</div>
 	<div class="block">
 		<h3>Staff</h3>
 		<ul class="staff">
-			<li class="staff-member"><span class="board-position">Director of Communications</span>, Nia Brown</li>
-			<li class="staff-member"><span class="board-position">Director of Marketing & Special Events</span>, LaTonya P. Thompson</li>
+			<li class="staff-member"><span class="board-position">Director of Communications</span>Nia Brown</li>
+			<li class="staff-member"><span class="board-position">Director of Marketing & Special Events</span>LaTonya P. Thompson</li>
 
 		</ul>
 	</div>
@@ -50,8 +50,8 @@ include("includes/header.php");
 	<div class="block">
 		<h3>Programs &amp; Conferences</h3>
 		<p>We believe every person deserves a chance in live life of dignity with the possibilities of to fulfill hopes and dreams. We sponsor and host a number of programs, activities, and conferences that fulfill the tenants of our mission and purpose.</p>
-		<p>SisterTalk: A Women’s Empowerment Conference “A Gathering to Reclaim Women”<span><a href="#">Register Here</a></span></p>
-		<p>Girls in P. E. A. R. L.S. Mentoring Academy<span><a href="#">Click Here</a></span></p>
+		<p>SisterTalk: A Women’s Empowerment Conference “A Gathering to Reclaim Women” <span><a href="sister-talk.php">Register Here</a></span></p>
+		<p>Girls in P. E. A. R. L.S. Mentoring Academy <span><a href="girls-in-pearls.php">Click Here</a></span></p>
 		<ul class="programs-initiatives">
 			<li class="program-init">Back to School Enrichment Conference</li>
 			<li class="program-init">Sponsored College Scholarships</li>
