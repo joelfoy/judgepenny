@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href='http://fonts.googleapis.com/css?family=Give+You+Glory&v2' rel='stylesheet' type='text/css'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Judge Penny</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="slide-style.css" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<!-- #container starts here-->
+<div id="container">
+<!-- #header starts here-->
+<div id="header">
+<div class="head-top">
+<!--.logo starts here-->
+<div class="logo"><a href="index.html"><img src="images/judge-jenny.png"/ alt="Judge Jenny" title="Judge Jenny"></a>
+
+</div>
+<!--.tagline starts here-->
+<div class="tagline">Emmy Nominated, A Wise Woman Who Has Something To Say ...</div>
+<!--.tagline ends here-->
+<!--.logo ends here-->
+<!--.head starts here-->
+<div class="head">
+
+<!--.social-icons starts here-->
+<div class="social-icons"><h2><span>Social</span> Media:</h2><a href="http://www.facebook.com/pages/Judge-Penny/103832266315910 " target="_blank"><img src="images/facebook.png"/ alt="Facebook" title="Facebook"></a><a href="http://twitter.com/#!/judgepenny" target="_blank"><img src="images/twitter.png"/ alt="Twitter" title="Twitter"></a><a href="http://www.linkedin.com/pub/judge-penny-brown-reynolds/38/108/693"><img src="images/linked-in.png"/ alt="Linked In" title="Linked In"></a><a href="http://www.youtube.com/user/theJudgepenny"></a></div>
+<!--.social-icons ends here-->
+</div>
+</div>
+<!--.head ends here-->
+<!--.menu starts here-->
+<div class="menu">
+<ul>
+<li><a href="index.html">The Judge </a>
+ <ul>
+ <li><a href="biography.html">Biography</a></li>
+ <li><a href="judge-penny-story.html">Judge Penny's Story</a></li>
+ <li><a href="beyond-the-robe.html">Beyond The Robe</a></li>
+ <li><a href="events.html">Events</a></li>
+ </ul>
+ </li>
+<li><a href="speaking-requests.html">Speaking Requests</a></li>
+<li><a href="shopping.html">Shopping</a></li>
+<li><a href="penny-for-your-thoughts.html">Penny For Your Thoughts</a></li>
+<li><a href="judge-penny-foundation.html">Judge Penny’s Foundation</a></li>
+<li><a class="med">Media</a>
+<ul>
+<li><a href="media.html">Requests</a></li>
+<li><a href="video-clips.html">Video Clips</a></li>
+<li><a href="photos.html">Photos</a></li>
+<li><a href="press-room.html">Press Room</a></li></ul>
+</li>
+<li><a href="contact.html" class="last">Contact</a></li>
+</ul>
+</div>
+<!--.menu ends here-->
+</div>
+<!-- #header ends here-->
+<!-- #wrapper starts here-->
+<div id="wrapper">
+<!-- .slideshow starts here-->
+
+ <div class="slider-wrapper theme-default">
+            
+            <div id="slider" class="nivoSlider">
+                <a href="shopping.html"><img src="slideshow/images/book.jpg"  /></a>
+                <a href="judge-penny-foundation.html"><img src="slideshow/images/judge_penny_foundation.jpg" alt="Judge PEnny Foundation" /></a>
+                <a href="penny-for-your-thoughts.html"><img src="slideshow/images/judge_penny_opportunity.jpg" alt="" /></a>
+                <a href="penny-for-your-thoughts.html"><img src="slideshow/images/judge_penny_self_worth.jpg" alt="" /></a>
+				<a href="speaking-requests.html"><img src="slideshow/images/judge_penny_speaking_request.png" alt=""/></a>
+				<img src="slideshow/images/judge_penny_the_judge.jpg" alt=""/>
+            </div>
+            
+        </div>
+
+    
+    <script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+		
+    });
+    </script>
+
+	
+<!-- .slider-text ends here-->
+
+
+<!-- #container ends here-->
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Welcone To Hot Springs</title>
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+
+<script type="text/javascript">
+
+/*** 
+    Simple jQuery Slideshow Script
+    Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+***/
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 5000 );
+});
+
+</script>
+
+<script type="text/javascript">
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+    });
+});
+
+</script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="main-bg">
+ <div class="main">
+  <div class="body-rgt"><a href="store/">Shop Our<br />
+  Online Store<br />
+ Now!</a><br />
+  <br />
+  <a href="#"><img src="images/facebook.png" alt="Facebook" width="37" height="37" border="0" /></a><br />
+  <a href="#"><img src="images/youtube.png" alt="YouTube" width="35" height="35" border="0" /></a></div>
+  <!--Header-->
+  <div class="header">
+   <div class="logo"><a href="/"><img src="images/logo.jpg" alt="Hot Spring" border="0" title="Hot Spring" /></a></div>
+   <div class="hdr-rgt"><span>Store Hours:</span><br />
+    Mon-Fri: 10AM - 6PM<br />
+    Sat: 10AM - 4 PM<br />
+    Sun: 11 AM - 4 PM <span class="blue">608-788-7747</span> </div>
+  </div>
+   <!--End Header-->
+   
+   <!--Menu-->
+   <div class="menu">
+   <ul class="menu-1">
+   <li><a href="hot-spring-spas.html">Hot Tubs &amp; Spas</a>
+    <ul>
+	   <li><a href="#">Shop Hot Tube/Spas</a></li>
+	   <li><a href="hot-spring-spas.html">Hot Spring Spas</a></li>
+	   <li><a href="limelight-hot-tube.html">Limelight Hot Tube</a></li>
+	   <li><a href="#">Hot Sport Tube</a></li>
+	   <li class="last"><a href="#">Pre-Owned Hot Tube</a></li>
+     </ul>
+   </li>
+   <li><a href="above-ground-pool.html">Pools</a>
+    <ul>
+	   <li><a href="#">Shop Swimming Pool</a></li>
+	   <li><a href="above-ground-pool.html">Above Ground Pool</a></li>
+	   <li class="last"><a href="in-ground-pool.html">In Ground Pool</a></li>
+     </ul>
+   </li>
+   <li><a href="traditional-saunas.html">Saunas</a>
+    <ul>
+	   <li><a href="#">Shop Saunas</a></li>
+	   <li><a href="traditional-saunas.html">Traditional (rocks/stream)</a></li>
+	   <li><a href="far-infrared-saunas.html">Far-Infrared</a></li>
+	   <li><a href="outdoor-saunas.html">Outdoor</a></li>
+	   <li class="last"><a href="health-benefits-saunas.html">Health Benefits</a></li>
+     </ul>
+   </li>
+   <li><a href="#">Pool Tables</a>
+       <ul>
+	   <li><a href="#">Shop Pool Tables</a></li>
+	   <li class="last"><a href="olehausen.html">Olehausen</a></li>
+     </ul>
+   </li>
+   <li><a href="water-care-accessories.html"> Water Care &amp; Accessories</a></li>
+   <li><a href="spa-pool-services.html">Service</a>
+   <ul>
+	   <li><a href="spa-pool-services.html">Spa and Pool Service</a></li>
+	   <li><a href="maintenance-program.html">Maintenance Program</a></li>
+	   <li class="last"><a href="get-quote.html">Get a Quote</a></li>
+     </ul>
+   </li>
+   <li><a href="testimonials.html">Testimonials</a></li>
+   <li><a href="about.html">About Us</a></li>
+   <li class="last"><a href="contact.html">Contact</a></li>
+   </ul>
+   </div>
+    <!--End Menu-->
+	
+	 <div class="video"><img src="images/video.jpg" alt="" /></div>
+    <div class="content">
+	<h1 class="heading">Hot Spring Spas of La Crosse</h1>
+	<h3 class="heading">Hot Tubs - Spas - Saunas -  Pools - Billiards</h3>
+	We know the true value that a <span>spa</span> can add, not only to your home, but to your 
+health as well. That is why we choose to carry the highest quality and most 
+reputable lines of <span>hot tubs and spas</span> that the industry has to offer.
+A hot tub can be a special place that brings family and friends closer together, 
+or a special retreat for quiet moments alone. A place that refreshes the mind and 
+body alike in the convenience and comfort of your own backyard. Browse our 
+hot tub models to find a spa that's perfect for you and your family.
+To enhance your hot tub experience, we carry various <span>spa accessories</span> such as 
+hot tub <span>water maintenance products</span>, jet kits for hot tubs, spa covers, hot tub 
+pillows, spa cover removal systems, and much more! </div>	 
+
+<div id="slideshow">
+    <img src="home-slider/image2.jpg" alt="Slideshow Image 2" class="active" />
+    <img src="home-slider/image3.jpg" alt="Slideshow Image 3" />
+    <img src="home-slider/image4.jpg" alt="Slideshow Image 4" />
+	<img src="home-slider/image5.jpg" alt="Slideshow Image 5" />
+</div>
+	 
+ </div>
+ 
+<!--Blue Area--> 
+ <div class="blue-area">
+  <div class="blue-main">
+	<div class="col1">
+	<h4>Get a Quote!</h4>
+	It’s a great time for a 
+Hot Spring  Spa!</div>
+   <div class="col2">
+	<h4>Trade In/Trade Up</h4>
+	Your old hot tub still has value use it to trade up for a NEW Model!</div>
+   <div class="col3"><h4>Shop Chemical Supplies & Accessories</h4>
+	Our affordable water maintenance supplies are carefully selected to protect your investment.</div>
+	<div class="col4"><h4>Easy Financing!</h4>
+	Pre-qualify your hot
+tub or spa purchase.</div>
+   <div class="col5"><h4>Customer Service</h4>
+	<strong>Call      608-788-7747<br />
+	Get Directions   <span> Go&gt;</span><br />
+	e-mail us        <span>Go&gt;</span></strong><br />
+	</div>
+ </div>
+ </div>
+ <!--End Blue Area--> 
+
+ <!--Bottom Area--> 
+ <div class="bottom">
+  <div class="client-logo">
+  <h3>We’re proud to bring you these brands.</h3>
+  <ul id="mycarousel" class="jcarousel-skin-tango">
+    <li><img src="brand-logo/hot-sport.png" alt="Hot Spring" width="178" height="77" /></li>
+    <li><img src="brand-logo/limelight.png" width="109" height="77" /></li>
+    <li><img src="brand-logo/solana.png" /></li>
+    <li><img src="brand-logo/vogue.png" width="76" height="77" /></li>
+    <li><img src="brand-logo/foxpool.png" width="133" height="77" /></li>
+    <li><img src="brand-logo/jrs.png" width="160" height="77" /></li>
+	<li><img src="brand-logo/limelight.png" width="109" height="77" /></li>
+	 <li><img src="brand-logo/vogue.png" width="76" height="77" /></li>
+    <li><img src="brand-logo/foxpool.png" width="133" height="77" /></li>
+    <li><img src="brand-logo/solana.png" /></li>
+  </ul>
+  </div>
+    
+  <div class="footer">
+  <div class="ftr-link"><a href="#">Site Map</a> | <a href="#">Privacy Policy</a></div>
+  &copy;Copyright, Hot Springs La Crosse., All Rights Reserved, 576 Theatre Road, Onalaska WI 54650<br />
+   Web Site strategy, graphic design, development and hosting by theideacenter.<br />
+  </div>
+ </div>
+<!--End Blue Area--> 
+
+</div>
+</body>
+</html>

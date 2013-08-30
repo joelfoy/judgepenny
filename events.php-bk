@@ -1,0 +1,123 @@
+<?php
+include("includes/header.php");
+?>
+<div id="wrapper">
+<!-- .content2 starts here-->
+<div class="content2">
+<!-- .left-area starts here-->
+<div class="left-area">
+<!-- .sidebar2 starts here-->
+<div class="sidebar2">
+<h1>Home</h1>
+<!--<img src="images/side-top.png"/>-->
+<div class="sidebar-text">
+<?php
+include("includes/left.php");
+?>
+</div>
+<!--<img src="images/side-btm.png"/>-->
+</div>
+<!-- .sidebar2 ends here-->
+
+<!-- .sidebar2 starts here-->
+<div class="sidebar2" style="margin-top:30px;">
+<h1>Store</h1>
+<div class="sidebar-text1">
+<a href="shopping.html">
+<img src="images/buy-now.png"/>
+</a>
+<!--<img src="images/judge-book.png"/><h2></h2>
+<p>7 Steps to Peace of Mind is an engaging and transformative guide in which Judge Penny Brown Reynolds presents straight forward and time tested perspectives on how to live a better life and how to obtain the peace of mind you deserve.</p>-->
+</div>
+</div>
+<!-- .sidebar2 ends here-->
+</div>
+<!-- .left-area ends here-->
+<!-- .right-area starts here-->
+<div class="right-area">
+<!-- .entry2 starts here-->
+<div class="entry4">
+<!-- .main-area starts here-->
+<div class="main-area">
+<div class="bread-crumbs"><a href="index.html">The Judge</a><span> >> Judge Penny’s Story</span></div>
+<h2>Experienced.</h2>
+<span style="color:#4025D9;"><i>Recent Engagements and Appearances:</i></span>
+<p>103rd Alpha Kappa Alpha Sorority  Founder&rsquo;s Day<br>
+    Little Rock, Arkansas</p><br>
+<p>Trinity Broadcasting Network (TBN)<br>
+    Praise the Lord Program<br>
+    Atlanta, Georgia</p><br>
+<p>Sisters Who Care Mission Summit<br>
+    Christian Fellowship Baptist Church<br>
+    College Park, Georgia</p><br>
+<p>Rites of Passage Leadership Program<br>
+    New Mercies Christian Church<br>
+    JW Marriott Buckhead Hotel<br>
+    Atlanta, Georgia</p><br>
+<p>Chefs of the World<br>
+    Hyatt Regency Hotel<br>
+    Atlanta, Georgia</p><br>
+<p>Law &amp; Religion Symposium<br>
+    John Marshall Law School<br>
+    Atlanta, Georgia</p><br>
+<p>National Organization of Black Elected  LegislativeWomen<br>
+    Annual Trailblazers Awards<br>
+    The Twelve Hotel<br>
+    Atlanta, Georgia</p><br>
+<p>The National Urban League Convention<br>
+    Chicago, Ill</p><br>
+<p>Bethune-Cookman&nbsp;  University<br>
+    Sanate Week Rally<br>
+    Daytona Beach, Florida</p><br>
+<p>National Women in History Luncheon<br>
+    Daytona State University<br>
+    Daytona, Florida<br>
+    Women&rsquo;s Empowerment Day<br>
+    Florida State University at Panama City<br>
+    Panama City, Florida</p><br>
+<p>Hunter Hill Baptist Church<br>
+    Atlanta, Georgia</p><br>
+<p>Let Us Make Man Conference<br>
+    Fort Valley State University<br>
+    Fort Valley, Georgia</p><br>
+<p>Women&rsquo;s Conference<br>
+    Family Fellowship Church International<br>
+    Riverside, California</p><br>
+<p>The Heart of Marriage Retreat<br>
+    Presented by Couples Who Care of Ben Hill UMC &amp;  The Knot of Cascade UMC<br>
+    Dolce Hotels and Resorts<br>
+    Peachtree City, Georgia</p><br>
+<p>2011 Strengthening Families in West Virginia  Conference<br>
+    Kanawha Institute for Social Research &amp; Action,  Inc.<br>
+    Charleston Town Center Marriott Hotel<br>
+    Charleston, West Virginia</p><br>
+<p>Family Empowerment Conference<br>
+    Mt. Olive AME Church<br>
+    Orlando, Florida</p><br>
+<p>Annual Career Strategies Conference<br>
+    Corporate Counsel Women of Color<br>
+    Las Vegas, Nevada</p><br>
+<p>Xavier University<br>
+    Black History Month Speaker<br>
+    New Orleans, Louisiana </p><br>
+<p>Sisters Incorporated Foundation<br>
+    Rosa Parks Women of Courage Speaker<br>
+    Columbus Convention Center<br>
+    Columbus Georgia</p>
+
+</div>
+<img src="images/main-btm.png"/>
+<!-- .main-area ends here-->
+</div>
+<!-- .entry2 ends here-->
+</div>
+<!-- .right-area ends here-->
+</div>
+<!-- .content2 ends here-->
+
+
+</div>
+<!-- #wrapper ends here-->
+<?php
+include("includes/footer.php");
+?>

@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href='http://fonts.googleapis.com/css?family=Give+You+Glory&v2' rel='stylesheet' type='text/css'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Press Room</title>
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript">
+
+/*** 
+    Simple jQuery Slideshow Script
+    Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+***/
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 3000 );
+});
+
+</script>
+
+<script type="text/javascript">
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+    });
+});
+
+</script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!-- #container starts here-->
+<div id="container">
+<!-- #header starts here-->
+<div id="header">
+<div class="head-top">
+<!--.logo starts here-->
+<div class="logo"><a href="index.html"><img src="images/judge-jenny.png"/ alt="Judge Jenny" title="Judge Jenny"></a>
+
+</div>
+<!--.tagline starts here-->
+<div class="tagline">Emmy Nominated, A Wise Woman Who Has Something To Say ...</div>
+<!--.tagline ends here-->
+<!--.logo ends here-->
+<!--.head starts here-->
+<div class="head">
+
+<!--.social-icons starts here-->
+<div class="social-icons"><h2><span>Social</span> Media:</h2><a href="http://www.facebook.com/pages/Judge-Penny/103832266315910 " target="_blank"><img src="images/facebook.png"/ alt="Facebook" title="Facebook"></a><a href="http://twitter.com/#!/judgepenny" target="_blank"><img src="images/twitter.png"/ alt="Twitter" title="Twitter"></a><a href="#"><img src="images/linked-in.png"/ alt="Linked In" title="Linked In"></a><a href="#"><img src="images/you-tube.png"/ alt="You Tube" title="You Tube"></a>
+</div>
+<!--.social-icons ends here-->
+</div>
+</div>
+<!--.head ends here-->
+<!--.menu starts here-->
+<div class="menu">
+<ul>
+<li><a href="index.html">The Judge </a>
+ <ul>
+ <li><a href="biography.html">Biography</a></li>
+ <li><a href="judge-penny-story.html">Judge Penny's Story</a></li>
+ <li><a href="beyond-the-robe.html">Beyond The Robe</a></li>
+ <li><a href="events.html">Events</a></li>
+ </ul>
+ </li>
+<li><a href="speaking-requests.html">Speaking Requests</a></li>
+<li><a href="shopping.html">Shopping</a></li>
+<li><a href="penny-for-your-thoughts.html">Penny For Your Thoughts</a></li>
+<li><a href="judge-penny-foundation.html">Judge Penny’s Foundation</a></li>
+<li><a class="med">Media</a>
+<ul>
+<li><a href="media.html">Requests</a></li>
+<li><a href="video-clips.html">Video Clips</a></li>
+<li><a href="photos.html">Photos</a></li>
+<li><a href="press-room.html">Press Room</a></li>
+</ul>
+</li>
+<li><a href="contact.html" class="last">Contact</a></li>
+</ul>
+</div>
+<!--.menu ends here-->
+</div>
+<!-- #header ends here-->
+<!-- #wrapper starts here-->
+<div id="wrapper">
+<!-- .content2 starts here-->
+<div class="content2">
+
+<!-- .right-area starts here-->
+<div class="right-area1">
+<h1>Press Room</h1>
+<!-- .entry2 starts here-->
+<div class="entry3">
+<!-- .main-area starts here-->
+<div class="main-area">
+<!--<div class="bread-crumbs"><a href="index.html">The Judge</a><span> >> Beyond The Robe</span></div>-->
+
+<h2>Press Room</h2>
+
+<p><a href="http://www.huffingtonpost.com/judge-penny-reynolds/getting-through-the-holid_b_150358.html" target="_blank">Huffington Post: Getting Through The Holidays During Difficult Financial Days </a></p>
+</div>
+<img src="images/main-btm.png"/>
+<!-- .main-area ends here-->
+</div>
+<!-- .entry2 ends here-->
+</div>
+<!-- .right-area ends here-->
+
+<!-- .left-area starts here-->
+<div class="left-area">
+<!-- .sidebar2 starts here-->
+<div class="sidebar2">
+<h1>Media</h1>
+<!--<img src="images/side-top.png"/>-->
+<div class="sidebar-text">
+<a href="#"><img src="images/media1.png" / style="padding-left:8px;"></a>
+<a href="#"><img src="images/media2.png"/ style="padding-left:8px;"></a>
+</div>
+<!--<img src="images/side-btm.png"/>-->
+</div>
+<!-- .sidebar2 ends here-->
+
+<!-- .sidebar2 starts here-->
+<div class="sidebar2" style="margin-top:30px;">
+<h1 style="padding-left:4px;">Upcoming Events</h1>
+<div class="upcoming-events">
+<p><strong>103rd Alpha Kappa Alpha Sorority Founder’s Day<br />
+Little Rock, Arkansas</strong> <br /><br />
+Trinity Broadcasting Network (TBN)<br />
+Praise the Lord Program<br />
+Atlanta, Georgia<br /><br />
+
+<strong>Sisters Who Care Mission Summit<br />
+Christian Fellowship Baptist Church<br />
+College Park, Georgia</strong></p>
+<!--<img src="images/judge-book.png"/><h2></h2>
+<p>7 Steps to Peace of Mind is an engaging and transformative guide in which Judge Penny Brown Reynolds presents straight forward and time tested perspectives on how to live a better life and how to obtain the peace of mind you deserve.</p>-->
+</div>
+</div>
+<!-- .sidebar2 ends here-->
+</div>
+<!-- .left-area ends here-->
+
+</div>
+<!-- .content2 ends here-->
+
+
+</div>
+<!-- #wrapper ends here-->
+<!-- #footer starts here-->
+<div id="footer">
+<div class="footer">
+<div class="footer-menu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html">The Judge</a></li>
+<li><a href="speaking-requests.html">Speaking Requests</a></li>
+<li><a href="shopping.html">Shopping</a></li>
+<li><a href="penny-for-your-thoughts.html">Penny For Your Thoughts</a></li>
+<li><a href="judge-penny-foundation.html">Judge Penny’s Foundation</a></li>
+<li><a href="media.html">Media</a></li>
+<li><a href="contact.html" class="last">Contact</a></li>
+</ul>
+</div>
+<div class="copyright">Copyright Judge Penny Brown Reynolds, All Rights Reserved</div>
+</div>
+<div class="site-info"><p>Site by: <a href="http://www.thehdmgroup.com" target="_blank">The HDM Group</a></p></div>
+</div>
+<!-- #footer starts here-->
+</div>
+<!-- #container ends here-->
+</body>
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href='http://fonts.googleapis.com/css?family=Give+You+Glory&v2' rel='stylesheet' type='text/css'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Speaking Requests</title>
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript">
+
+
+function validate()
+{
+	var firstname=document.getElementById("Field4").value;
+	if (trimAllSpace(firstname)=="")
+	{
+		alert('Enter First Name');
+		   return false;
+	}
+	var lastname=document.getElementById("Field5").value;
+	if (trimAllSpace(lastname)=="")
+	{
+		alert('Enter Last Name');
+		   return false;
+	}
+	var email=document.getElementById("Field2").value;
+	if(trimAllSpace(email)=="")
+	{
+		alert('Enter Email Address');
+		   return false
+	}
+	else
+	{
+		var at="@"
+			var dot="."
+			var lat=email.indexOf(at)
+			var lstr=email.length
+			var ldot=email.indexOf(dot)
+			if (email.indexOf(at)==-1){
+			   alert("Invalid E-mail Address");
+			   return false;
+			}
+	
+			if (email.indexOf(at)==-1 || email.indexOf(at)==0 || email.indexOf(at)==lstr){
+			   alert("Invalid E-mail Address");
+			   return false;
+			}
+	
+			if (email.indexOf(dot)==-1 || email.indexOf(dot)==0 || email.indexOf(dot)==lstr){
+				alert("Invalid E-mail Address");
+				return false;
+			}
+	
+			 if (email.indexOf(at,(lat+1))!=-1){
+				alert("Invalid E-mail Address");
+				return false;
+			 }
+	
+			 if (email.substring(lat-1,lat)==dot || email.substring(lat+1,lat+2)==dot){
+				alert("Invalid E-mail Address");
+				return false;
+			 }
+	
+			 if (email.indexOf(dot,(lat+2))==-1){
+				alert("Invalid E-mail Address");
+				return false;
+			 }
+			
+			 if (email.indexOf(" ")!=-1){
+				alert("Invalid E-mail Address");
+				return false;
+			 }
+		 } 
+		 
+		var ph1=document.getElementById("Field13").value;
+		var ph2=document.getElementById("Field13-1").value;
+		var ph3=document.getElementById("Field13-2").value;
+		if (ph1=="" || ph2=="" || ph3=="" )
+		{
+			alert('Enter Phone Number');
+			   return false;
+		}
+		
+		var organization=document.getElementById("Field7").value;
+		if (trimAllSpace(organization)=="")
+		{
+			alert('Enter Organization Name');
+			   return false;
+		}
+		
+		var ed1=document.getElementById("Field8-1").value;
+		var ed2=document.getElementById("Field8-2").value;
+		var ed3=document.getElementById("Field8").value;
+		if (ed1=="" || ed2=="" || ed3=="" )
+		{
+			alert('Enter Event Date');
+			return false;
+		}
+		else
+		{
+				var input=ed1+'/'+ed2+'/'+ed3;
+				var validformat=/^\d{2}\/\d{2}\/\d{4}$/; //Basic check for format validity
+				//var returnval=false;
+				if (!validformat.test(input.value))
+				{
+					alert("Invalid Date Format. Please correct and submit again.");
+					return false;
+				}
+				else
+				{ //Detailed check for valid date ranges
+					var monthfield=input.value.split("/")[0];
+					var dayfield=input.value.split("/")[1];
+					var yearfield=input.value.split("/")[2];
+					var dayobj = new Date(yearfield, monthfield-1, dayfield);
+					if ((dayobj.getMonth()+1!=monthfield)||(dayobj.getDate()!=dayfield)||(dayobj.getFullYear()!=yearfield))
+					alert("Invalid Day, Month, or Year detected.");
+					return false;
+					
+				}
+		}
+		var eloc=document.getElementById("Field9").value;
+		if (trimAllSpace(eloc)=="")
+		{
+			alert('Enter Event Location');
+			return false;
+		}
+		
+		var timeStr=document.getElementById("Field10a").value;
+		if (timeStr=="")
+		{
+			alert('Enter Event Time');
+			return false;
+		}
+		else
+		{
+			
+				var timePat = /^(\d{1,2}):(\d{2})(:(\d{2}))?(\s?(AM|am|PM|pm))?$/;
+				
+				var matchArray = timeStr.match(timePat);
+				if (matchArray == null) {
+				alert("Time is not in a valid format.");
+				return false;
+				}
+				hour = matchArray[1];
+				minute = matchArray[2];
+				second = matchArray[4];
+				ampm = matchArray[6];
+				
+				if (second=="") { second = null; }
+				if (ampm=="") { ampm = null }
+				
+				if (hour < 0  || hour > 23) {
+				alert("Hour must be between 1 and 12.");
+				return false;
+				}
+				if (hour <= 12 && ampm == null) {
+				alert("You must specify AM or PM.");
+				return false;
+				}
+				if (minute<0 || minute > 59) {
+				alert ("Minute must be between 0 and 59.");
+				return false;
+				}
+				if (second != null && (second < 0 || second > 59)) {
+				alert ("Second must be between 0 and 59.");
+				return false;
+				}				
+		}
+		
+		var ecity=document.getElementById("Field12").value;
+		if (trimAllSpace(ecity)=="")
+		{
+			alert('Enter City');
+			return false;
+		}
+		
+		var message=document.getElementById("Field1").value;
+		if (trimAllSpace(message)=="")
+		{
+			alert('Enter City');
+			return false;
+		}
+		  return false;
+}
+
+function trimAllSpace(str) 
+{ 
+    var str1 = ''; 
+    var i = 0; 
+    while(i != str.length) 
+    { 
+        if(str.charAt(i) != ' ') 
+            str1 = str1 + str.charAt(i); i ++; 
+    } 
+    return str1; 
+}
+/*** 
+    Simple jQuery Slideshow Script
+    Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+***/
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 3000 );
+});
+
+</script>
+
+<script type="text/javascript">
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+    });
+});
+
+</script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!-- #container starts here-->
+<div id="container">
+<!-- #header starts here-->
+<div id="header">
+<div class="head-top">
+<!--.logo starts here-->
+<div class="logo"><a href="index.html"><img src="images/judge-jenny.png"/ alt="Judge Jenny" title="Judge Jenny"></a>
+
+</div>
+<!--.tagline starts here-->
+<div class="tagline">Emmy Nominated, A Wise Woman Who Has Something To Say ...</div>
+<!--.tagline ends here-->
+<!--.logo ends here-->
+<!--.head starts here-->
+<div class="head">
+
+<!--.social-icons starts here-->
+<div class="social-icons"><h2><span>Social</span> Media:</h2><a href="http://www.facebook.com/pages/Judge-Penny/103832266315910 " target="_blank"><img src="images/facebook.png"/ alt="Facebook" title="Facebook"></a><a href="http://twitter.com/#!/judgepenny" target="_blank"><img src="images/twitter.png"/ alt="Twitter" title="Twitter"></a><a href="#"><img src="images/linked-in.png"/ alt="Linked In" title="Linked In"></a><a href="#"><img src="images/you-tube.png"/ alt="You Tube" title="You Tube"></a>
+</div>
+<!--.social-icons ends here-->
+</div>
+</div>
+<!--.head ends here-->
+<!--.menu starts here-->
+<div class="menu">
+<ul>
+<li><a href="index.html">The Judge </a>
+ <ul>
+ <li><a href="biography.html">Biography</a></li>
+ <li><a href="judge-penny-story.html">Judge Penny's Story</a></li>
+ <li><a href="beyond-the-robe.html">Beyond The Robe</a></li>
+ <li><a href="events.html">Events</a></li>
+ </ul>
+ </li>
+<li><a href="speaking-requests.html">Speaking Requests</a></li>
+<li><a href="shopping.html">Shopping</a></li>
+<li><a href="penny-for-your-thoughts.html">Penny For Your Thoughts</a></li>
+<li><a href="judge-penny-foundation.html">Judge Penny’s Foundation</a></li>
+<li><a class="med">Media</a>
+<ul>
+<li><a href="media.html">Requests</a></li>
+<li><a href="video-clips.html">Video Clips</a></li>
+<li><a href="photos.html">Photos</a></li>
+<li><a href="press-room.html">Press Room</a></li>
+</ul>
+</li>
+<li><a href="contact.html" class="last">Contact</a></li>
+</ul>
+</div>
+<!--.menu ends here-->
+</div>
+<!-- #header ends here-->
+<!-- #wrapper starts here-->
+<div id="wrapper">
+<!-- .content2 starts here-->
+<div class="content2">
+
+<!-- .right-area starts here-->
+<div class="right-area1">
+<h1>Speaking Requests</h1>
+<!-- .entry2 starts here-->
+<div class="entry3">
+<!-- .main-area starts here-->
+<div class="main-area">
+<!--<div class="bread-crumbs"><a href="index.html">The Judge</a><span> >> Beyond The Robe</span></div>-->
+
+<img src="images/speaking.jpg"/ style="float:left; margin:0px 6px 6px 0px;">
+<p>Judge Penny Brown Reynolds conducts speaking engagements across the country. If you are interested in booking Judge Penny for a future speaking engagement, complete the contact form below.</p>
+<div class="contact-form">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+  <tr>
+    <td width="20%"><label id="title4" for="Field4"> <span id="req_4">*</span>First Name </label></td>
+    <td width="70%"> <span id="sprytextfield1">
+      <input autocomplete="off" id="Field4" name="Field4" value="" size="12" tabindex="1" type="text">
+       </span></td>
+  </tr>
+  <tr>
+    <td><label id="title4" for="Field4"> <span id="req_4">*</span>Last Name </label></td>
+    <td> <input id="Field5" name="Field5" value="" size="18" tabindex="2" type="text"></td>
+  </tr>
+  <tr>
+    <td><label id="title2" for="Field2"> <span id="req_2">*</span>Email Address </label></td>
+    <td><input autocomplete="off" id="Field2" name="Field2" value="" maxlength="255" tabindex="3" type="text"></td>
+  </tr>
+  <tr>
+    <td><label id="title13" for="Field13"> <span id="req_13">*</span>Phone Number </label></td>
+    <td> <span id="sprytextfield3">
+      <input autocomplete="off" id="Field13" name="Field13" value="" size="3" maxlength="3" tabindex="4" type="text">
+    <!---   		<label for="Field13"></label>-->
+    <input id="Field13-1" name="Field13-1" value="" size="3" maxlength="3" tabindex="5" type="text">
+    <!---   		<label for="Field13-1">###</label>-->
+    <input id="Field13-2" name="Field13-2" value="" size="4" maxlength="4" tabindex="6" type="text"></span>
+    <!--<label for="Field13-2">####</label>--></td>
+  </tr>
+  <tr>
+    <td><label id="title6" for="Field6">Cell Phone Number </label></td>
+    <td>    <span id="sprytextfield4">
+      <input autocomplete="off" id="Field6" name="Field6" value="" size="3" maxlength="3" tabindex="7" type="text">
+    
+    <!---   		<label for="Field6">(###)</label>-->
+    <input id="Field6-1" name="Field6-1" value="" size="3" maxlength="3" tabindex="8" type="text">
+    <!---   		<label for="Field6-1">###</label>-->
+    <input id="Field6-2" name="Field6-2" value="" size="4" maxlength="4" tabindex="9" type="text"></span>
+    <!--<label for="Field6-2">####</label>--></td>
+  </tr>
+  <tr>
+    <td><label id="title7" for="Field7"> <span id="req_7">*</span>Organization </label></td>
+    <td><span id="sprytextfield5">
+      <input autocomplete="off" id="Field7" name="Field7" value="" maxlength="255" tabindex="10" type="text"></span></td>
+  </tr>
+  <tr>
+    <td><label id="title8" for="Field8"> <span id="req_8">*</span>Event Date </label></td>
+    <td><span id="sprytextfield6">
+      <input autocomplete="off" id="Field8-1" name="Field8-1" value="" size="2" maxlength="2" tabindex="11" type="text">
+    <!-- /  		<label for="Field8-1">MM</label>-->
+    <input id="Field8-2" name="Field8-2" value="" size="2" maxlength="2" tabindex="12" type="text">
+    <!--/  		<label for="Field8-2">DD</label>-->
+    <input id="Field8" name="Field8" value="" size="4" maxlength="4" tabindex="13" type="text"></span>
+    <!--<label for="Field8">YYYY</label>-->
+    <span id="cal8">(mm/dd/yyyy) </span></td>
+  </tr>
+  <tr>
+    <td><label id="title9" for="Field9"> <span id="req_9">*</span>Event Location</label></td>
+    <td><span id="sprytextfield7"><input autocomplete="off" id="Field9" name="Field9" value="" maxlength="255" tabindex="14" type="text"></span></td>
+  </tr>
+  <tr>
+    <td><label id="foli10a" for="Field10a"> <span id="req_10a">*</span>Event Time(HH:MM:SS AM/PM)</label></td>
+    <td><span id="sprytextfield8"><input autocomplete="off" id="Field10a" name="Field10a" value="" maxlength="255" tabindex="14" type="text"></span></td>
+  </tr>
+  <tr>
+    <td> <label id="title11a" for="Field11a">Time Zone</label></td>
+    <td><span id="spryselect1">
+      <select id="Field11a" name="Field11a" tabindex="16">
+        <option value="Pacific"> Pacific </option>
+        <option value="Mountain"> Mountain </option>
+        <option value="Central"> Central </option>
+        <option value="Eastern"> Eastern </option>
+        <option value="Alaskan"> Alaskan </option>
+        <option value="Hawaii"> Hawaii </option>
+      </select>
+ </span></td>
+  </tr>
+  <tr>
+    <td><label id="title12" for="Field12"> <span id="req_12">*</span>City</label></td>
+    <td> <span id="sprytextfield9"><input autocomplete="off" id="Field12" name="Field12" value="" maxlength="255" tabindex="15" type="text"></span></td>
+  </tr>
+  <tr>
+    <td><label id="title11" for="Field11"> State </label></td>
+    <td> <span id="spryselect2">
+      <select id="Field11" name="Field11" tabindex="16">
+        <option value="Alabama"> Alabama </option>
+        <option value="Alaska"> Alaska </option>
+        <option value="Arizona"> Arizona </option>
+        <option value="Arkansas"> Arkansas </option>
+        <option value="California"> California </option>
+        <option value="Colorado"> Colorado </option>
+        <option value="Connecticut"> Connecticut </option>
+        <option value="Delaware"> Delaware </option>
+        <option value="Florida"> Florida </option>
+        <option value="Georgia"> Georgia </option>
+        <option value="Hawaii"> Hawaii </option>
+        <option value="Idaho"> Idaho </option>
+        <option value="Illinois"> Illinois </option>
+        <option value="Indiana"> Indiana </option>
+        <option value="Iowa"> Iowa </option>
+        <option value="Kansas"> Kansas </option>
+        <option value="Kentucky"> Kentucky </option>
+        <option value="Louisiana"> Louisiana </option>
+        <option value="Maine"> Maine </option>
+        <option value="Maryland"> Maryland </option>
+        <option value="Massachusetts"> Massachusetts </option>
+        <option value="Michigan"> Michigan </option>
+        <option value="Minnesota"> Minnesota </option>
+        <option value="Mississippi"> Mississippi </option>
+        <option value="Missouri"> Missouri </option>
+        <option value="Montana"> Montana </option>
+        <option value="Nebraska"> Nebraska </option>
+        <option value="Nevada"> Nevada </option>
+        <option value="New Hampshire"> New Hampshire </option>
+        <option value="New Jersey"> New Jersey </option>
+        <option value="New Mexico"> New Mexico </option>
+        <option value="New York"> New York </option>
+        <option value="North Carolina"> North Carolina </option>
+        <option value="North Dakota"> North Dakota </option>
+        <option value="Ohio"> Ohio </option>
+        <option value="Oklahoma"> Oklahoma </option>
+        <option value="Oregon"> Oregon </option>
+        <option value="Pennsylvania"> Pennsylvania </option>
+        <option value="Rhode Island"> Rhode Island </option>
+        <option value="South Carolina"> South Carolina </option>
+        <option value="South Dakota"> South Dakota </option>
+        <option value="Tennessee"> Tennessee </option>
+        <option value="Texas"> Texas </option>
+        <option value="Utah"> Utah </option>
+        <option value="Vermont"> Vermont </option>
+        <option value="Virginia"> Virginia </option>
+        <option value="Washington"> Washington </option>
+        <option value="West Virginia"> West Virginia </option>
+        <option value="Wisconsin"> Wisconsin </option>
+        <option value="Wyoming"> Wyoming </option>
+      </select>
+</span></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+<ul>
+<li id="foli1">
+    <label id="title1" for="Field1"> <span id="req_1">*</span>Message and Additional Information </label>
+    <div><span id="sprytextarea1">
+      <textarea autocomplete="off" id="Field1" name="Field1" rows="10" cols="50" tabindex="17"></textarea>
+ </span></div>
+    <p id="instruct1"></p>
+  </li>
+  <p>* Required Fields</p>
+  <li>
+    <input name="submit" type="submit" id="saveForm" value="Submit" onclick="validate();" >
+  </li>
+</ul>
+</div>
+</div>
+<img src="images/main-btm.png"/>
+<!-- .main-area ends here-->
+</div>
+<!-- .entry2 ends here-->
+</div>
+<!-- .right-area ends here-->
+
+<!-- .left-area starts here-->
+<div class="left-area">
+<!-- .sidebar2 starts here-->
+<div class="sidebar2">
+<h1>Media</h1>
+<!--<img src="images/side-top.png"/>-->
+<div class="sidebar-text">
+<a href="#"><img src="images/media1.png" / style="padding-left:8px;"></a>
+<a href="#"><img src="images/media2.png"/ style="padding-left:8px;"></a>
+</div>
+<!--<img src="images/side-btm.png"/>-->
+</div>
+<!-- .sidebar2 ends here-->
+
+<!-- .sidebar2 starts here-->
+<div class="sidebar2" style="margin-top:30px;">
+<h1 style="padding-left:4px;">Upcoming Events</h1>
+<div class="upcoming-events">
+<p><strong>103rd Alpha Kappa Alpha Sorority Founder’s Day<br />
+Little Rock, Arkansas</strong> <br /><br />
+Trinity Broadcasting Network (TBN)<br />
+Praise the Lord Program<br />
+Atlanta, Georgia<br /><br />
+
+<strong>Sisters Who Care Mission Summit<br />
+Christian Fellowship Baptist Church<br />
+College Park, Georgia</strong></p>
+<!--<img src="images/judge-book.png"/><h2></h2>
+<p>7 Steps to Peace of Mind is an engaging and transformative guide in which Judge Penny Brown Reynolds presents straight forward and time tested perspectives on how to live a better life and how to obtain the peace of mind you deserve.</p>-->
+</div>
+</div>
+<!-- .sidebar2 ends here-->
+</div>
+<!-- .left-area ends here-->
+
+</div>
+<!-- .content2 ends here-->
+
+
+</div>
+<!-- #wrapper ends here-->
+<!-- #footer starts here-->
+<div id="footer">
+<div class="footer">
+<div class="footer-menu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html">The Judge</a></li>
+<li><a href="speaking-requests.html">Speaking Requests</a></li>
+<li><a href="shopping.html">Shopping</a></li>
+<li><a href="penny-for-your-thoughts.html">Penny For Your Thoughts</a></li>
+<li><a href="judge-penny-foundation.html">Judge Penny’s Foundation</a></li>
+<li><a href="media.html">Media</a></li>
+<li><a href="contact.html" class="last">Contact</a></li>
+</ul>
+</div>
+<div class="copyright">Copyright Judge Penny Brown Reynolds, All Rights Reserved</div>
+</div>
+<div class="site-info"><p>Site by: <a href=" http://www.thehdmgroup.com" target="_blank">The HDM Group</a></p></div>
+</div>
+<!-- #footer starts here-->
+</div>
+<!-- #container ends here-->
+</body>
+</html>

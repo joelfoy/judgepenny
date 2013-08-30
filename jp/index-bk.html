@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Judge Penny</title>
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript">
+
+/*** 
+    Simple jQuery Slideshow Script
+    Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+***/
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 3000 );
+});
+
+</script>
+
+<script type="text/javascript">
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+    });
+});
+
+</script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!-- #container starts here-->
+<div id="container">
+<!-- #header starts here-->
+<div id="header">
+<div class="head-top">
+<!--.logo starts here-->
+<div class="logo"><a href="index.php"><img src="images/judge-jenny.png"/ alt="Judge Jenny" title="Judge Jenny"></a>
+
+</div>
+<!--.tagline starts here-->
+<div class="tagline">Emmy Nominated, A Wise Woman Who Has Something To Say ...</div>
+<!--.tagline ends here-->
+<!--.logo ends here-->
+<!--.head starts here-->
+<div class="head">
+
+<!--.social-icons starts here-->
+<div class="social-icons"><h2><span>Social</span> Media:</h2><a href="#"><img src="images/facebook.png"/ alt="Facebook" title="Facebook"></a><a href="#"><img src="images/twitter.png"/ alt="Twitter" title="Twitter"></a><a href="#"><img src="images/linked-in.png"/ alt="Linked In" title="Linked In"></a><a href="#"><img src="images/you-tube.png"/ alt="You Tube" title="You Tube"></a>
+</div>
+<!--.social-icons ends here-->
+</div>
+</div>
+<!--.head ends here-->
+<!--.menu starts here-->
+<div class="menu">
+<ul>
+<li><a href="#">The Judge </a>
+ <ul>
+ <li><a href="#">nhj</a></li>
+ <li><a href="#">dfg</a></li>
+ <li><a href="#">kll</a></li>
+ <li><a href="#">dfhg</a></li>
+ </ul>
+ </li>
+<li><a href="#">Speaking Requests</a></li>
+<li><a href="#">Shopping</a></li>
+<li><a href="#">Penny For Your Thoughts</a></li>
+<li><a href="#">Judge Penny’s Foundation</a></li>
+<li><a href="#">Media</a>
+<ul>
+<li><a href="#">media</a></li>
+<li><a href="#">media1</a></li>
+<li><a href="#">media2</a></li>
+<li><a href="#">media3</a></li>
+</ul>
+</li>
+<li><a href="#" class="last">Contact</a></li>
+</ul>
+</div>
+<!--.menu ends here-->
+</div>
+<!-- #header ends here-->
+<!-- #wrapper starts here-->
+<div id="wrapper">
+<!-- .slideshow starts here-->
+<div id="slideshow">
+<!-- .slider starts here-->
+<div class="slider">
+<div class="slider-image"><img src="images/slide-img01.png"/><img src="images/slide-img02.png"/><img src="images/slide-img03.png"/></div>
+<!-- .slider-text starts here-->
+<div class="slider-text"><h1>The Judge</h1>
+<h2>Experienced.</h2>
+<p>Judge Penny Brown Reynolds brings years of experience to her many roles.  As a distinguished trial court judge and published author, she has lived the life that others can only speak about. The Emmy nominated Executive Producer presides over the syndicated show, “Family Court with Judge Penny.” She is a captivating speaker who specializes in the areas of law, religion and politics, gender and race, women and children’s issues, family relations as well as pop culture and business relations.</p>
+<a href="#">-Learn More-</a>
+</div>
+<!-- .slider-text ends here-->
+</div>
+<!-- .slider ends here-->
+
+</div>
+<!-- .slideshow ends here-->
+<!-- .slider-button starts here-->
+<div class="slider-button">
+<a href="#"><img src="images/active-dot.png"/></a><a href="#"><img src="images/dot.png"/></a><a href="#"><img src="images/dot.png"/></a><a href="#"><img src="images/dot.png"/></a>
+</div>
+<!-- .slider-button ends here-->
+<!-- .content starts here-->
+<div class="content">
+<div class="block">
+<div class="h">
+<div class="heading">
+<h1 class="head-title"><span>Email</span> List</h1></div>
+<div class="heading">
+<h1 class="head-title"><span>Upcoming</span> Events</h1>
+</div></div>
+<div class="m-top"></div>
+<img src="images/m-top.png"/ class="m-top" style="margin-bottom:-3px;">
+<div class="block1">
+<div class="mail">
+<div class="mail-mod">
+<form class="form1">
+  Email address: <input type="text" name="e-mail" size="40"/>
+</form>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="45%">&nbsp;</td>
+    <td width="13%"><input type="submit" value="Submit" class="btn" /></td>
+    <td width="33%"><input type="reset" value="Reset"  class="btn"/></td>
+  </tr>
+</table>
+
+</div>
+</div>
+<div class="events"><a href="#">Hunter Hill Baptist Church</a><br />
+Atlanta, Georgia<br /><br />
+<a href="#">103rd Alpha Kappa Alpha Sorority Founder’s Day</a><br />
+Little Rock, Arkansas</div>
+</div>
+<img src="images/m-btm.png"/ class="m-btm">
+<div class="m-btm"></div>
+</div>
+<!-- .entry starts here-->
+<div class="entry">
+<!-- .left starts here-->
+<div class="left">
+<div class="video">
+<h1>Online  Multimedia: </h1>
+<a href="#"><img src="images/video1.png"/ style="margin-right:60px;"></a><a href="#"><img src="images/video1.png"/></a>
+</div>
+</div>
+<!-- .left ends here-->
+<div class="right">
+<div class="sidebar">
+<h1><span>Penny</span> For Your Thoughts:</h1>
+<div class="s-top"></div>
+<div class="text-widget"><p>Judge Penny Gives “Real” Advice </p>
+<a href="#">What do do when you lost your job?</a><br />
+<a href="#">How to walk away from a bad relationship</a><br />
+<a href="#">How do I deal with an out of control teenager?</a><br />
+<a href="#">It’s not what you say, but how you say it</a></br>
+</div>
+<div class="s-btm"></div>
+</div>
+</div>
+
+</div>
+<!-- .entry ends here-->
+
+</div>
+<!-- .content ends here-->
+<div class="recent">
+<div class="m-top"></div>
+<div class="block2"><h1><span>Recent</span> Twitter Post:</h1></div>
+<div class="m-btm"></div>
+</div>
+
+</div>
+<!-- #wrapper ends here-->
+<!-- #footer starts here-->
+<div id="footer">
+<div class="footer">
+<div class="footer-menu">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">The Judge</a></li>
+<li><a href="#">Speaking Requests</a></li>
+<li><a href="#">Shopping</a></li>
+<li><a href="#">Penny For Your Thoughts</a></li>
+<li><a href="#">Judge Penny’s Foundation</a></li>
+<li><a href="#">Media</a></li>
+<li><a href="#" class="last">Contact</a></li>
+</ul>
+</div>
+<div class="copyright">Copyright Judge Penny Brown Reynolds, All Rights Reserved</div>
+</div>
+<div class="site-info"><p>Site by: The HDM Group</p></div>
+</div>
+<!-- #footer starts here-->
+</div>
+<!-- #container ends here-->
+</body>
+</html>

@@ -1,0 +1,112 @@
+<?php
+include("includes/header.php");
+?>
+<div id="wrapper">
+<!-- .content2 starts here-->
+<div class="content2">
+<div class="video">
+
+<!-- .right-area starts here-->
+<div class="right-area1">
+<h1>Video Clips</h1>
+<!-- .entry2 starts here-->
+<div class="entry3">
+<!-- .main-area starts here-->
+<div class="main-area">
+
+<h2>Video Clips</h2>
+<div class="main-videos" style="margin-left:34px;">
+<p>
+	<div id="home-video1" style="margin-right:2px;float:left;">
+		<video src="videos/BlackInAmerica2.f4v" height="191" id="container1" poster="images/video1.png" width="262"> </video> <script type="text/javascript"> jwplayer("container1").setup({ flashplayer: "videos/player.swf" }); </script>
+	</div>
+
+	<div id="home-video2" style="padding-left:280px">
+		<video src="videos/CWSpeakUp INtroduction .f4v"  height="191" id="container2" poster="images/video1.png" width="262"> </video> <script type="text/javascript"> jwplayer("container2").setup({ flashplayer: "videos/player.swf" }); </script>
+	</div>
+</p>
+
+<p>
+	<div id="home-video3" style="margin-right:2px;float:left;">
+		<video src="videos/CWSpeakUp Politics.f4v" height="191" id="container3" poster="images/video1.png" width="262"> </video> <script type="text/javascript"> jwplayer("container3").setup({ flashplayer: "videos/player.swf" }); </script>
+	</div>
+
+	<div id="home-video4" style="padding-left:280px">
+		<video src="videos/Dr.Phil.f4v"  height="191" id="container4" poster="images/video1.png" width="262"> </video> <script type="text/javascript"> jwplayer("container4").setup({ flashplayer: "videos/player.swf" }); </script>
+	</div>
+</p>
+
+<p>
+	<div id="home-video5" style="margin-right:2px;float:left;">
+		<video src="videos/DrDRewSEGMENT1.f4v" height="191" id="container5" poster="images/video1.png" width="262"> </video> <script type="text/javascript"> jwplayer("container5").setup({ flashplayer: "videos/player.swf" }); </script>
+	</div>
+
+	<div id="home-video6" style="padding-left:280px">
+		<video src="videos/DrDrewSegment2.f4v"  height="191" id="container6" poster="images/video1.png" width="262"> </video> <script type="text/javascript"> jwplayer("container6").setup({ flashplayer: "videos/player.swf" }); </script>
+	</div>
+</p>
+
+<p>
+	<div id="home-video7" style="margin-right:2px;float:left;">
+		<video src="videos/DrDrewSegment3.f4v" height="191" id="container7" poster="images/video1.png" width="262"> </video> <script type="text/javascript"> jwplayer("container7").setup({ flashplayer: "videos/player.swf" }); </script>
+	</div>
+
+	<div id="home-video8" style="padding-left:280px">
+		<video src="videos/Family Court Intro.f4v"  height="191" id="container8" poster="images/video1.png" width="262"> </video> <script type="text/javascript"> jwplayer("container8").setup({ flashplayer: "videos/player.swf" }); </script>
+	</div>
+</p>
+</div>
+</div>
+<img src="images/main-btm.png"/>
+<!-- .main-area ends here-->
+</div>
+<!-- .entry2 ends here-->
+</div>
+<!-- .right-area ends here-->
+
+<!-- .left-area starts here-->
+<div class="left-area">
+<!-- .sidebar2 starts here-->
+<div class="sidebar2">
+<h1>Media</h1>
+<!--<img src="images/side-top.png"/>-->
+<div class="sidebar-text">
+<video src="videos/Joseph E Lowery.f4v" height="210" id="right1" poster="images/media1.png" width="312"> </video> <script type="text/javascript"> jwplayer("right1").setup({ flashplayer: "videos/player.swf" }); </script>
+<br/>
+<video src="videos/BlackinAmerica3.f4v" height="210" id="right2" poster="images/media2.png" width="312"> </video> <script type="text/javascript"> jwplayer("right2").setup({ flashplayer: "videos/player.swf" }); </script>
+
+</div>
+<!--<img src="images/side-btm.png"/>-->
+</div>
+<!-- .sidebar2 ends here-->
+
+<!-- .sidebar2 starts here-->
+<div class="sidebar2" style="margin-top:30px;">
+<h1 style="padding-left:4px;">Upcoming Events</h1>
+<div class="upcoming-events">
+<p><strong>103rd Alpha Kappa Alpha Sorority Founder’s Day<br />
+Little Rock, Arkansas</strong> <br /><br />
+Trinity Broadcasting Network (TBN)<br />
+Praise the Lord Program<br />
+Atlanta, Georgia<br /><br />
+
+<strong>Sisters Who Care Mission Summit<br />
+Christian Fellowship Baptist Church<br />
+College Park, Georgia</strong></p>
+<!--<img src="images/judge-book.png"/><h2></h2>
+<p>7 Steps to Peace of Mind is an engaging and transformative guide in which Judge Penny Brown Reynolds presents straight forward and time tested perspectives on how to live a better life and how to obtain the peace of mind you deserve.</p>-->
+</div>
+</div>
+<!-- .sidebar2 ends here-->
+</div>
+<!-- .left-area ends here-->
+
+</div>
+<!-- .content2 ends here-->
+
+
+</div>
+<!-- #wrapper ends here-->
+<?php
+include("includes/footer.php");
+?>

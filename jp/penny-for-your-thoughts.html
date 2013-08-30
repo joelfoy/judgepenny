@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href='http://fonts.googleapis.com/css?family=Give+You+Glory&v2' rel='stylesheet' type='text/css'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Penny For Your Thoughts</title>
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript">
+
+/*** 
+    Simple jQuery Slideshow Script
+    Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+***/
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 3000 );
+});
+
+</script>
+
+<script type="text/javascript">
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+    });
+});
+
+</script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!-- #container starts here-->
+<div id="container">
+<!-- #header starts here-->
+<div id="header">
+<div class="head-top">
+<!--.logo starts here-->
+<div class="logo"><a href="index.html"><img src="images/judge-jenny.png"/ alt="Judge Jenny" title="Judge Jenny"></a>
+
+</div>
+<!--.tagline starts here-->
+<div class="tagline">Emmy Nominated, A Wise Woman Who Has Something To Say ...</div>
+<!--.tagline ends here-->
+<!--.logo ends here-->
+<!--.head starts here-->
+<div class="head">
+
+<!--.social-icons starts here-->
+<div class="social-icons"><h2><span>Social</span> Media:</h2><a href="http://www.facebook.com/pages/Judge-Penny/103832266315910 " target="_blank"><img src="images/facebook.png"/ alt="Facebook" title="Facebook"></a><a href="http://twitter.com/#!/judgepenny" target="_blank"><img src="images/twitter.png"/ alt="Twitter" title="Twitter"></a><a href="#"><img src="images/linked-in.png"/ alt="Linked In" title="Linked In"></a><a href="#"><img src="images/you-tube.png"/ alt="You Tube" title="You Tube"></a>
+</div>
+<!--.social-icons ends here-->
+</div>
+</div>
+<!--.head ends here-->
+<!--.menu starts here-->
+<div class="menu">
+<ul>
+<li><a href="index.html">The Judge </a>
+ <ul>
+ <li><a href="biography.html">Biography</a></li>
+ <li><a href="judge-penny-story.html">Judge Penny's Story</a></li>
+ <li><a href="beyond-the-robe.html">Beyond The Robe</a></li>
+ <li><a href="events.html">Events</a></li>
+ </ul>
+ </li>
+<li><a href="speaking-requests.html">Speaking Requests</a></li>
+<li><a href="shopping.html">Shopping</a></li>
+<li><a href="penny-for-your-thoughts.html">Penny For Your Thoughts</a></li>
+<li><a href="judge-penny-foundation.html">Judge Penny’s Foundation</a></li>
+<li><a class="med">Media</a>
+<ul>
+<li><a href="media.html">Requests</a></li>
+<li><a href="video-clips.html">Video Clips</a></li>
+<li><a href="photos.html">Photos</a></li>
+<li><a href="press-room.html">Press Room</a></li>
+</ul>
+</li>
+<li><a href="contact.html" class="last">Contact</a></li>
+</ul>
+</div>
+<!--.menu ends here-->
+</div>
+<!-- #header ends here-->
+<!-- #wrapper starts here-->
+<div id="wrapper">
+<!-- .content2 starts here-->
+<div class="content2">
+
+<!-- .right-area starts here-->
+<div class="right-area1">
+<h1>Penny For Your Thoughts</h1>
+<!-- .entry2 starts here-->
+<div class="entry4">
+<!-- .main-area starts here-->
+<div class="main-area">
+<!--<div class="bread-crumbs"><a href="index.html">The Judge</a><span> >> Beyond The Robe</span></div>-->
+<h2>Judge Penny Gives “Real” Advice </h2>
+<img src="images/advice.jpg"/ style="margin-left:25px;">
+<h3>&nbsp;</h3>
+<p align="left"> <h3>Cyber Emotional Relationships:  Real or Harmless </h3><br />
+  <p>
+  I recently had a friend to seek my advice about whether or not she  was involved in an emotional affair online and if indeed I felt she had crossed  the line. She had reconnected with a friend from high school on Facebook.&nbsp; She didn&rsquo;t particularly remember him from  school, but over time they had begun daily communications online. <br />
+  <br />
+  She insisted that she was not in physical contact with the person,  but that she could feel in her heart that something different was happening to  her.&nbsp; In my opinion, she only asked the  question because she wanted to be able to talk about their conversations with  me. After listening to her situation, it became clear to me that she was having  an emotional affair, albeit on line.&nbsp; <br />
+  <br />
+  Although she sought my advice, it was clear that she wasn&rsquo;t really  looking for me to tell her the truth.&nbsp;  Her initial response was that but because there was no physical contact,  how in the world could she be having an affair. &nbsp;&nbsp;I explained that I felt she was having an &ldquo;emotional  affair&rdquo; which, in actuality, could be equally as damaging to her current relationship  with her spouse.<br />
+  After raising this issue during a recent staff meeting, I realized  that there is considerable debate and confusion about what constitutes  emotional affairs, particularly those online. &nbsp;Because these online emotional affairs usually  start out innocently enough as a friendship, there may be a feeling that they  are somehow not real.&nbsp; However, they are  very real.<br />
+  <br />
+  The obvious question is what is an emotional online affair? An  emotional affair occurs when online or internet communication allows people to  develop a level of intimacy that distracts from another relationship.&nbsp; Relationships are about intimacy, trust, and  openness.&nbsp;&nbsp; The danger is because these  communications are online, people may feel that it blurs the definition of  cheating.&nbsp; When cheating, in most cases,  isn&rsquo;t about the physical, but about an emotional and psychological connection  with someone.&nbsp;&nbsp; Everyone wants to be  heard and everyone wants to matter.&nbsp;  These online relationships often allow people to share their deepest  feelings. <br />
+  I recognized that my friend was involved in an emotional affair  because she was sharing intimate thoughts and feelings with this other person.&nbsp; Once it moved from casual social contact  online to a situation where this person became an increasing focus of her time,  I knew there was a problem.&nbsp; It moved  from a casual acquaintance &ldquo;friend&rdquo; online to a true relationship.<br />
+  <br />
+  The key for me was the fact that the relationship had become a  &ldquo;secret&rdquo; to her partner. &nbsp;This is the  number one sign that an emotional affair has evolved. &nbsp;Secrets have no place in real relationships. &nbsp;She started telling her online friend about  her problems, her joys, their common interests and her dreams.&nbsp; All the time she spent online communicating  allowed her to develop an emotional bond with this person.<br />
+  The online friendship grew into a strong bond that was wrapped in  secrecy.&nbsp; The time she should have spent  with her partner at home was being taken up by the time and energy she was  putting into this online relationship.&nbsp;  It was clear to me that &nbsp;she was  having an emotional affair.<br />
+  <br />
+  You know that you have crossed the line when the online friend and  you have developed an intimacy of your own. Other signs include investing a  great deal of time and intimate communication of your thoughts and feelings.&nbsp; Your emotional energy toward your partner is  limited because you are now sharing your deepest&nbsp; feelings with the online friend.&nbsp; <br />
+  <br />
+  You may feel guilt free because there is no physical contact, but  you know in your heart that you have become attached to this other person.&nbsp; If the relationship is a secret from your  partner, you spend a large amount of time on the computer with this online  person and you have not included your partner in the discussion --- you have  crossed the line.<br />
+  <br />
+  Emotional affairs are about betrayal and are devastating.&nbsp;&nbsp; Once these emotional affairs become  personal, they can open the door to negative repercussions occurring in your  life. &nbsp;It is easy to sit at computer and  pour your heart out while the online person seems to understand and connect  with you in a powerful way.&nbsp;  <br />
+  <br />
+  Relationships, however, are open and take a great deal of energy and work.&nbsp; Nothing good can come from anything that  takes way from your partner&rsquo;s emotional bond. These emotional online affairs  are unacceptable.&nbsp; <br />
+  If my friend had to ask the question, deep down inside, she  already knew the answer.</p>
+<h3>&nbsp;</h3>
+<h3>What to do when you lose your job?</h3>
+<p>1.	The first thing you must do when you lose your job is not to panic. Everything happens for a reason, and you have to quickly make the best of a bad situation.  Gather yourself and whatever you do, don’t take it personal. Business is business. You must always remember that when one door closes another one can open. You may be disappointed, but you don’t have time to feel sorry for yourself.  Sorry will not pay your bills. See this as an opportunity for a new beginning. </p>
+
+<p>2.	Immediately do an assessment of your finances.  Make a list of everything you owe; your monthly payments and what cash and savings you have on hand. You must always keep a roof over your head.  Always pay your house note or rent first, utilities and food should be second, followed by transportation & gasoline needs. After those debts are secured, pay your remaining debts. Inform your debtors immediately if you find yourself behind on bills.  Do not run away from this issue. There is nothing to be ashamed of.  This happens to people everyday.</p>
+
+<p>3.	File for any benefits that you are entitled to receive.</p>
+
+<p>4.	 You must stop spending money on non-essentials. Save as much money as you can for your necessities. </p>
+
+<p>5.	Don’t allow the fear of the unknown to spread through your mind and that of your family. Have a family meeting and be honest with family members about the situation.  Make it a general conversation without details.  Your job as the parent is to reassure your children that life may change, but the fundamentals of the family unit will remain the same.  Everyone will be asked to make a sacrifice.  This is the time for the family unit to be supportive of one another.   </p>
+
+<p>6.	Assess your desires for your life.  Changing positions can reflect the mark of a new season in your life.  This could present a wonderful opportunity to decide what you really want to do.  As you are re-doing your resume and contacting your network of friends and family for job opportunities, look for the greater lesson.  Do you want to continue doing what you’ve been doing? Would you like to start a business?   Do you need to go back to school? Should you update your technology skills?   You should make something good come out of this.</p>
+
+<p>7.	Make looking for a job your new job.  Spend anywhere from 6-8 hours a day making calls, sending out resumes, checking job sites on line – doing what you have to do to make it. Do not allow yourself to become discouraged.  It takes time.  Learn the power of waiting.  Remember; see this situation as an opportunity to start over.  </p>
+
+<p>8.	 Put your pride aside and let as many people know that you are without a job and that you are looking for work.  Be willing to lower your standards by taking multiple part-time jobs if you must.  There is a saying that “you can get a job when you have a job.”  Do what you have to do to get to the next position.</p>
+
+<p>9.	Finally, make some promises to yourself.  Make the promise that you will never find yourself in this position again.Create multiple revenue streams in the future so that you are not dependent on any person, business or situation.  Do what you have to do if it means selling cakes out of your house, having monthly yard sales or getting a booth at a flea market, getting a real estate license, or even making jewelry in your spare time.  Allow this situation to give you the determination to be free from debt.  Allow this situation to give you power.</p>
+
+<h3>How to walk away from a bad relationship</h3>
+<p>I realize that it hard to leave someone you love.  But you have to remember that everyone you love may not be good for you. I am certain that deep within your heart, you know if that person is not good for your life.  We tend to focus and live on the potential of the relationship and what it could be or what it was.  We reflect on the good moments and look past all the signs and red flags that are in our reality letting us know that this person is not good for us.</p>
+<p>Remaining in a bad relationship has more to do with you then the other person.  It has to do with your lack of self-esteem, it means being comfortable and not wanting a change. </p>
+<p> It is hard to let go.  You have to remember that every time you allow yourself to be mistreated, it takes something away from who you are.</p>
+<p>You deserve to get back what you give.   Staying in a bad relationship will never allow you the opportunity to grow and be yourself.  You are missing out on the other people who could come into your life who will treat you the way you deserve to be treated.  Trust yourself and love yourself enough to know that you deserve to be around someone who brings you joy.  You deserve to be around someone who respects you, listens to you, honors you and is not trying to change you.  Leaving it not easy, but staying will never change anything. </p>
+<h3>How do I deal with an out of control teenager?</h3>
+<p>Everywhere I go, people stop and want to talk to me abut their out of control teenager. Because parents are not given a handbook on how to raise children, it can be difficult to know what to do so that you don’t run your children away.</p>
+<p>Children need discipline and structure.  By the time they become out of control teenagers, it will be difficult to get them in line.  I said difficult, but not impossible.</p>
+<p>The number one thing to remember is that you are the parent.  Your teenager is not your buddy or your friend. By virtue of you having that child, you are responsible for his or her actions.  You must take control of the situation.  It will take time and disciple on your part. This teenager didn’t get like this overnight.  You have allowed this child to get away with a great deal over the years and now it has gotten out of hand. </p>
+<p>As children become older, parents tend to give them adult like responsibilities before they are able to process the consequences of their actions. Teenagers are simple older children. They deserve respect from you, but you are the parent.  Do not relinquish your control to your child.</p>
+<p>Communication is key.  Talk to your teenager everyday -- even when they don’t want to talk.  Become a part of their lives.  Don’t just be a provider for them, but engage them with their friends, school and their activities.  Spend time with your teens.  Go on family outings.  Have weekly family meetings over dinner. Make the family meetings a requirement.  Discuss issues that arise both in the family and issues outside of the family.  Lay out the ground rules for living in your house and expect the rules be followed.  When the rules are broken, make certain that you follow through with appropriate consequences. Seek outside support if you need it. But, remember, you are the parent.</p>
+<p>Finally, become educated with social media and technology.  A good way to remain in contact with your teenage is through the way they communicate.  A text to your teenager during the day letting them know that you love them can go a long way.</p>
+<p>Being a parent is hard.  It is a life long commitment.  Seek advice from professionals if necessary and get the help of other family members.  Place your teenagers in constructive extracurricular activities. They may be more receptive of others. Just know that you’re not alone.  You must take back your house and communicate clearly and specifically what your expectations are. </p>
+
+
+<h3>It’s not what you say, but how you say it.</h3>
+<p>I remember my mother saying to me that “it’s not what you say, buy how you say it.”  This comes to mind as I have watched the current dialogue between those persons who find themselves criticizing President Barak Obama verses those who support him. The argument from his supporters seem to be that he is not above being criticized for his job performance, but the criticism should not take personal overtones. In other words, deal with the facts and not attack him personally.  Everyone should agree that name calling should be totally eliminated from the discussion.  The questions surrounding his birth seem to have diminished for the moment.  This was unnecessary and a waste of time.  Hidden within the question of his birth was a deep seated indictment on his personhood which should have outraged all of us.  With the upcoming re-election, I am certain that new personal attacks will resume. </p>
+<p>The initial problem as I see it is that we live in an era of “anything goes.”  People say any and everything. The more provocative the comments, the more the people get noticed. We need a new season of tolerance to emerge before this destructive dialogue turns back the clock on the progress that has been made over the years.</p>
+<p>I heard someone say the night President Obama was elected the following comment, “With President Obama’s presidency, we can finally heal from American’s original sin of slavery and allow the womb to be closed. “ I will never forget it.  Knowing people as I do, it was hard for me to believe that one single event could change the deep pain that permeates this country because of race.  It was a hopeful statement and it demonstrated to me the tremendous burden that was to be placed upon our President because of his race.  </p>
+<p>If the current dialogue continues on this course, those who are committed to seeing that the President is not re-elected will use the personal attacks as a means of suppressing voter turnout.  This is a very real political fact.  We must be very careful not to allow the current discussions to be covertly used by the President’s political enemies.  We must become political grown-ups as we continue to keep our eyes on the big picture.  Ask yourself, are you comfortable with any other alternative.  </p>
+<p>As a voter and an American, we all have the right to question what the President or any elected official does. But, please deal with the facts. Stop the personal attacks.  </p>
+<p>Remember, it’s how you say it. </p>
+</div>
+<img src="images/main-btm.png"/>
+<!-- .main-area ends here-->
+</div>
+<!-- .entry2 ends here-->
+</div>
+<!-- .right-area ends here-->
+
+<!-- .left-area starts here-->
+<div class="left-area">
+<!-- .sidebar2 starts here-->
+<div class="sidebar2">
+<h1>Media</h1>
+<!--<img src="images/side-top.png"/>-->
+<div class="sidebar-text">
+<a href="#"><img src="images/media1.png" / style="padding-left:8px;"></a>
+<a href="#"><img src="images/media2.png"/ style="padding-left:8px;"></a>
+</div>
+<!--<img src="images/side-btm.png"/>-->
+</div>
+<!-- .sidebar2 ends here-->
+
+<!-- .sidebar2 starts here-->
+<div class="sidebar2" style="margin-top:30px;">
+<h1 style="padding-left:4px;">Upcoming Events</h1>
+<div class="upcoming-events">
+<p><strong>103rd Alpha Kappa Alpha Sorority Founder’s Day<br />
+Little Rock, Arkansas</strong> <br /><br />
+Trinity Broadcasting Network (TBN)<br />
+Praise the Lord Program<br />
+Atlanta, Georgia<br /><br />
+
+<strong>Sisters Who Care Mission Summit<br />
+Christian Fellowship Baptist Church<br />
+College Park, Georgia</strong></p>
+<!--<img src="images/judge-book.png"/><h2></h2>
+<p>7 Steps to Peace of Mind is an engaging and transformative guide in which Judge Penny Brown Reynolds presents straight forward and time tested perspectives on how to live a better life and how to obtain the peace of mind you deserve.</p>-->
+</div>
+</div>
+<!-- .sidebar2 ends here-->
+</div>
+<!-- .left-area ends here-->
+
+</div>
+<!-- .content2 ends here-->
+
+
+</div>
+<!-- #wrapper ends here-->
+<!-- #footer starts here-->
+<div id="footer">
+<div class="footer">
+<div class="footer-menu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html">The Judge</a></li>
+<li><a href="speaking-requests.html">Speaking Requests</a></li>
+<li><a href="shopping.html">Shopping</a></li>
+<li><a href="penny-for-your-thoughts.html">Penny For Your Thoughts</a></li>
+<li><a href="judge-penny-foundation.html">Judge Penny’s Foundation</a></li>
+<li><a href="media.html">Media</a></li>
+<li><a href="contact.html" class="last">Contact</a></li>
+</ul>
+</div>
+<div class="copyright">Copyright Judge Penny Brown Reynolds, All Rights Reserved</div>
+</div>
+<div class="site-info"><p>Site by: <a href="http://www.thehdmgroup.com" target="_blank">The HDM Group</a></p></div>
+</div>
+<!-- #footer starts here-->
+</div>
+<!-- #container ends here-->
+</body>
+</html>
