@@ -7,6 +7,7 @@ include("includes/header.php");
  <div class="slider-wrapper theme-default">
             
             <div id="slider" class="nivoSlider">
+            	<a href="sister-talk.php"><img src="slideshow/images/SisterTalk_WebBanner.jpg"/></a>
                 <a href="shopping.php"><img src="slideshow/images/book.jpg"  /></a>
                 <a href="judge-penny-foundation.php"><img src="slideshow/images/judge_penny_foundation.jpg" alt="Judge PEnny Foundation" /></a>
                 <a href="penny-for-your-thoughts.php"><img src="slideshow/images/judge_penny_opportunity.jpg" alt="" /></a>

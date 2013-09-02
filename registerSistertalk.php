@@ -11,7 +11,7 @@ $errors = array();
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $email = $_POST['email'];
-$homePhone = $_POST['homePhone'];
+$dayPhone = $_POST['dayPhone'];
 $workPhone = $_POST['workPhone'];
 $cellPhone = $_POST['cellPhone'];
 $address = $_POST['address'];
@@ -27,7 +27,7 @@ if (!$lastName)
 	$errors[] = "Last name is required";
 if (!$email || !validateEmail($email))
 	$errors[] = "A valid email is required";
-if (!$homePhone)
+if (!$dayPhone)
 	$errors[] = "A home phone is required";
 if (!$address)
 	$errors[] = "An address is required";
@@ -42,7 +42,7 @@ if (!$age)
 // Verify Errors
 if (count($errors) > 0) {
 	echo $errors;
-	print "<meta http-equiv=\"refresh\" content=\"0;URL=http://www.judgepenny.com/sistertalk.php?errors=true\">";
+	print "<meta http-equiv=\"refresh\" content=\"0;URL=http://www.judgepenny.com/sister-talk.php?errors=true\">";
 }
 // multiple recipients
 //$to  = 'marmourjr@gmail.com' . ', '; // note the comma
@@ -61,9 +61,9 @@ $message = '
 <body>
   <p>Name: '.$firstName.' '.$lastName.'</p>
   <p>Email: '.$email.'</p>
-  <p>Home Phone: '.$homePhone.'</p>
-  'if ($workPhone) { '<p>CellPhone: '.$workPhone.'</p>' }'
-  'if ($cellPhone) { '<p>CellPhone: '.$cellPhone.'</p>' }'
+  <p>Home Phone: '.$dayPhone.'</p>
+  <p>CellPhone: '.$workPhone.'</p>
+  <p>CellPhone: '.$cellPhone.'</p>
   <p>Address: '.$address.'</p>
   <p>City: '.$city.'</p>
   <p>State: '.$state.'</p>

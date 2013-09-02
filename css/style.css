@@ -218,12 +218,13 @@ img{ border:none; margin:0px;}
 
 .block	{	margin-bottom: 10px;
 		}
-.block h3, .block h4	{	line-height: 1.2em;	}
+.block h3, .block h4	{	line-height: 1.2em; margin: 0;	}
 .block h5	{	font-size: 1.2em; margin: 0 0 2px 0;	}
 .mainCol ul, .leftCol ul, .rightCol ul {	padding: 0; list-style: none;	}
 .mainCol ul li, .leftCol ul li, .rightCol ul li {	border-bottom: 1px solid rgba(0,0,0,0.2);
 													padding-bottom: 5px;
 													margin-bottom: 5px;
+													font-size: 12px;
 												}
 .board-position	{	font-weight: bold; text-transform: uppercase; font-size: 0.9em; display: block;	}						
 .sister-talk	{	background: rgba(255,255,255,0.5); padding: 20px; margin-top: 15px;	}
@@ -234,4 +235,26 @@ img{ border:none; margin:0px;}
 					border-top: 1px solid rgba(0,0,0,0.2);	
 				}
 .conference-faq h3	{	margin: 0 0 10px;	}
-.conference-faq p	{	margin: 0 0 5px 0;	}																			
+.conference-faq p	{	margin: 0 0 5px 0;	}																		
+
+/*==============sister talk page============*/
+
+.conference-registration	{	float: right;
+								width: 450px;
+								clear: left;
+								padding: 30px 20px 40px;
+								background-color: rgba(223, 208, 199, 0.8);
+								border: 1px solid #6d53a2;
+								margin: 10px 0 0 40px;
+							}
+.conference-registration h3	{	margin-bottom: 15px;	}
+.conference-registration .input-container	{	margin-bottom: 12px; position: relative;	}
+.form-input-label			{	display: block; margin-bottom: 3px;	}
+.form-input-error			{	float: right; display: none;	}
+.form-input					{	width: 80%; padding: 4px; font-size: 14px;	}
+.required					{	color: #dc291e;	}
+.radio						{}
+.checkbox-container			{	display: block;	overflow: auto;}
+.form-checkbox				{	float: left; margin-right: 10px;	}
+.pref-description			{	}
+	
