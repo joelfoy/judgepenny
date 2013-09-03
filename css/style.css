@@ -220,14 +220,14 @@ img{ border:none; margin:0px;}
 		}
 .block h3, .block h4	{	line-height: 1.2em; margin: 0;	}
 .block h5	{	font-size: 1.2em; margin: 0 0 2px 0;	}
-.mainCol ul, .leftCol ul, .rightCol ul {	padding: 0; list-style: none;	}
+.mainCol ul, .leftCol ul, .rightCol ul {	padding: 0; margin: 0; list-style: none;	}
 .mainCol ul li, .leftCol ul li, .rightCol ul li {	border-bottom: 1px solid rgba(0,0,0,0.2);
 													padding-bottom: 5px;
 													margin-bottom: 5px;
 													font-size: 12px;
 												}
 .board-position	{	font-weight: bold; text-transform: uppercase; font-size: 0.9em; display: block;	}						
-.sister-talk	{	background: rgba(255,255,255,0.5); padding: 20px; margin-top: 15px;	}
+.sister-talk, .girls-pearls	{	background: rgba(255,255,255,0.5); padding: 20px; margin-top: 15px;	}
 .sister-talk h3	{	font-size: 3.5em; margin: 0;	}
 
 
@@ -257,4 +257,16 @@ img{ border:none; margin:0px;}
 .checkbox-container			{	display: block;	overflow: auto;}
 .form-checkbox				{	float: left; margin-right: 10px;	}
 .pref-description			{	}
-	
+.register-link				{	margin: 50px 0;	}
+.register-link a 			{	background-color: #12AA37;
+								padding: 20px 30px;
+								font-size: 20px;
+								text-decoration: none;
+								color: white;
+								box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+								margin: 50px 0;	
+							}
+/*==============girls in pearls page============*/
+
+
+

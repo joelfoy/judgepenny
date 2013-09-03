@@ -59,7 +59,12 @@
 <li><a href="speaking-requests.php">Speaking Requests</a></li>
 <li><a href="shopping.php">Shopping</a></li>
 <li><a href="penny-for-your-thoughts.php">Penny For Your Thoughts</a></li>
-<li><a href="judge-penny-foundation.php">Judge Penny&#39;s Foundation</a></li>
+<li><a href="judge-penny-foundation.php">Judge Penny&#39;s Foundation</a>
+ <ul>
+ <li><a href="sister-talk.php">SisterTalk</a></li>
+ <li><a href="girls-in-pearls.php">Girls in  P.E.A.R.L.S</a></li>
+ </ul>
+</li>
 <li><a class="med">Media</a>
 <ul>
 <li><a href="media.php">Requests</a></li>
